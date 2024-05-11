@@ -17,9 +17,7 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [LoginController::class, 'index'])->name('login');
 
 Route::middleware(['auth', 'user-access:emple'])->prefix('user')->group(function() {
     Route::get('/', [UserController::class, 'index'])->name('user.index');

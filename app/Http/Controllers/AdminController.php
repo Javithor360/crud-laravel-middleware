@@ -12,7 +12,6 @@ class AdminController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        // dd(auth()->user());
     }
     /**
      * Display a listing of the resource.
